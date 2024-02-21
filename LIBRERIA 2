@@ -1,0 +1,42 @@
+/*Libreria 2
+ * NAIN CHALABE CIFUENTES
+ * EN ESTA LIBRERIA VAMOS A HACER EL PROCESO PARA OPERAR UN TRINOMIO CUADRADO PERFECTO
+ */
+public class TrinomioCuadradoPerfecto {
+
+    private int a, b, c;
+
+    // Constructor 
+    public TrinomioCuadradoPerfecto(int a, int b, int c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+    }
+
+    //verificar si el trinomio es cuadrado perfecto
+    public boolean esCuadradoPerfecto() {
+        return b == 2 * Math.sqrt(a) && c == a;
+    }
+
+    //obtener la factorización del trinomio cuadrado perfecto
+    public String factorizar() {
+        return "(" + Math.sqrt(a) + "x)^2";
+    }
+
+    
+    public static void main(String[] args) {
+        // Crear un trinomio 
+        TrinomioCuadradoPerfecto trinomio = new TrinomioCuadradoPerfecto(1, 4, 4);
+
+        // Verificar si lo es
+        if (trinomio.esCuadradoPerfecto()) {
+            System.out.println("El trinomio es cuadrado perfecto.");
+
+            // Factorización de este 
+            String factorizacion = trinomio.factorizar();
+            System.out.println("Factorización: " + factorizacion);
+        } else {
+            System.out.println("El trinomio no es cuadrado perfecto.");
+        }
+    }
+}

@@ -1,0 +1,45 @@
+/*Libreria 1
+ * NAIN CHALABE CIFUENTES
+ * EN ESTA LIBRERIA VAMOS A HACER EL USO DE 3 FUNCIONES, EN ESTE CASO UNA SUMA, EL CUADRADO DE (X) NÚMERO Y VERIFICACIÓN DE UN NÚMERO PAR
+ */
+public class Libreria {
+
+    
+
+    // Constructor
+    public Libreria() {   
+    }
+
+    //SUMA
+    public int sumar(int numero1, int numero2) {
+        return numero1 + numero2;
+    }
+
+    //Cuadrado de un número
+    public int obtenerCuadrado(int numero) {
+        return numero * numero;
+    }
+
+    //Verificar si un número es par
+    public void verificarPar(int numero) {
+        if (numero % 2 == 0) {
+            System.out.println(numero + " es un número par ");
+        } else {
+            System.out.println(numero + " no es un número par ");
+    }
+ }  
+    public static void main(String[] args) {
+        //instancia
+        Libreria nc = new Libreria();
+
+        //resultados
+        int sumaresult = nc.sumar(5, 3);
+        System.out.println("Resultado de la suma: " + sumaresult);
+
+        int numcuadrado = nc.obtenerCuadrado(4);
+        System.out.println("Cuadrado de 4: " + numcuadrado);
+
+        nc.verificarPar(7);
+        nc.verificarPar(10);
+    }
+}
